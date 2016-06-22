@@ -1,0 +1,100 @@
+html, body, h1, p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 14px;
+  line-height: 1.4;
+  font-family: 'Lobster', cursive;
+  color: #442D25;
+}
+
+.headertitle {
+  float: left;
+  margin-left: 50px;
+  line-height: 80px;
+  font-size: 36px;
+}
+
+.headerphone {
+  float: right;
+  margin-right: 10px;
+  line-height: 80px;
+  font-size: 28px;
+  padding-right: 15px;
+}
+
+.clearfix {
+  overflow: hidden;
+}
+
+.header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.menu {
+  list-style: none;
+  line-height: 55px;
+  float: left;
+}
+
+.menu li {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.menu a {
+  margin: 0;
+  width: 200px;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  font-size: 24px;
+  color: #442D25;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+.gotop {
+  display: block;
+  background: #ccc;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  margin-bottom: 15px;
+  margin-left: 15px;
+}
+
+.gotop::before {
+  content: '';
+  width: 0;
+  height: 0;
+  border: solid 10px;
+  border-color: transparent transparent white transparent;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -10px;
+  margin-top: -15px;
+}
+
+.section {
+  display: block;
+  width: 100%;
+
+}
+
+.section-main {
+  background: url("img/main.jpg") center center no-repeat;
+  background-size: cover;
+  height: 1000px;
+}
