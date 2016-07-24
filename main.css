@@ -14,23 +14,20 @@ body {
   float: left;
   margin-left: 50px;
   line-height: 80px;
-  font-size: 36px;
+  font-size: 28px;
 }
 
 .headerphone {
   float: right;
   margin-right: 10px;
   line-height: 80px;
-  font-size: 28px;
+  font-size: 24px;
   padding-right: 15px;
-}
-
-.clearfix {
-  overflow: hidden;
 }
 
 .header {
   position: absolute;
+  z-index: 1000;
   left: 0;
   right: 0;
   top: 0;
@@ -49,52 +46,83 @@ body {
   white-space: nowrap;
 }
 
-.menu a {
+.menu-link {
   margin: 0;
-  width: 200px;
+  width: 130px;
   text-align: center;
   display: block;
   text-decoration: none;
-  font-size: 24px;
+  font-size: 18px;
   color: #442D25;
 }
 
-.menu a:hover {
+.menu-link:hover {
   text-decoration: underline;
 }
 
-.gotop {
-  display: block;
-  background: #ccc;
-  border-radius: 100%;
-  width: 50px;
-  height: 50px;
-  position: relative;
-  margin-bottom: 15px;
-  margin-left: 15px;
-}
-
-.gotop::before {
-  content: '';
-  width: 0;
-  height: 0;
-  border: solid 10px;
-  border-color: transparent transparent white transparent;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin-left: -10px;
-  margin-top: -15px;
+.menu-link:active {
+  
 }
 
 .section {
   display: block;
   width: 100%;
-
+  background: gray center center no-repeat;
+  background-size: cover;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url("img/three_houses.jpg");
 }
 
 .section-main {
-  background: url("img/main.jpg") center center no-repeat;
-  background-size: cover;
-  height: 1000px;
+  position: relative;
+  width: 42vw;
+  height: 100vh;
+}
+
+.background {
+  position: absolute;
+  top: -60vh;
+  right: -5vw;
+  left: -100vw;
+  bottom: -50vh;
+  transform: rotate(20deg);
+  overflow: hidden;
+}
+
+.background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: -15vw;
+  bottom: 0;
+  transform: rotate(-20deg);
+  background:
+    linear-gradient(
+      0,
+      rgba(92, 169, 186, 0.43) 60%,
+      rgba(92, 169, 186, 0.5) 60%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(92, 169, 186, 0.43) 60%,
+      rgba(92, 169, 186, 0.5) 60%
+    );
+  background-size: 2em 2em;
+  background-color: seashell;
+  background-position: center 1em;
+}
+
+.section-main-text {
+  display: none;
+  padding-top: 80px;
+  padding-left: 50px;
+  font-size: 24px;
+  z-index: 10;
+  position: relative;
+}
+
+.section-main-text:target {
+  display: block;
 }
